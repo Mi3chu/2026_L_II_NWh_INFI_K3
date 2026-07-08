@@ -5,10 +5,12 @@ jobs:
         machine:
             image: ubuntu-2004:current
 
-        steps: 
-            - checkout 
-            - run: make deps 
-            - run: make test       
+        steps:
+            - checkout
+            - run: make deps
+            - run: make lint
+            - run: make test
+            - run: make docker_build
 workflows:
     basic:
         jobs:
