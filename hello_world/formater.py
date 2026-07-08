@@ -11,13 +11,13 @@ SUPPORTED = [PLAIN, PLAIN_UP, PLAIN_LO, JSON]
 def get_formatted(msg, imie, format):
     result = ""
     if format == PLAIN:
-        result = plain_text(asdamsg, imie)
+        result = plain_text(msg, imie)
     elif format == PLAIN_UP:
-        result = plain_text_upper_case(sadsmsg, imie)
+        result = plain_text_upper_case(msg, imie)
     elif format == PLAIN_LO:
-        result = plain_text_lower_case(ddddmsg, imie)
+        result = plain_text_lower_case(msg, imie)
     elif format == JSON:
-        result = format_to_json(mdsg, imie)
+        result = format_to_json(msg, imie)
     return result
 
 
